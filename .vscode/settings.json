@@ -1,0 +1,21 @@
+{
+    "files.exclude": {
+        "**/*.g.dart": true,
+        //".[^v]*": true,
+        "**/*.gitignore": true,
+        "**/*.flutter-plugins*": true,
+        "**/*.metadata": true,
+        "**/*.lock": true,
+        "**/*.iml": true,
+        "**/*.idea": true,
+        "**/*.dart_tool": true,
+        "**/*analysis_options.yaml": true,
+        "android": false,
+        "ios": true,
+        "build": true,
+        "l10n.yaml": false,
+        "lib/generated": true,
+        "pubspec.lock": true,
+        "README.md": true,
+    }
+}
