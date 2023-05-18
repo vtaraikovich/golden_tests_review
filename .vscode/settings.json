@@ -2,7 +2,7 @@
     "files.exclude": {
         "**/*.g.dart": true,
         //".[^v]*": true,
-        "**/*.gitignore": true,
+        "**/*.gitignore": false,
         "**/*.flutter-plugins*": true,
         "**/*.metadata": true,
         "**/*.lock": true,

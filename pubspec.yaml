@@ -20,12 +20,15 @@ dependencies:
   intl_utils: ^2.8.2
 
 dev_dependencies: 
+  alchemist: ^0.6.0
+  bloc_test: ^9.1.1
   build_runner: ^2.3.3
   flutter_gen_runner: ^5.3.1
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
   injectable_generator: ^2.1.5
+  mocktail: ^0.3.0
 
 flutter_gen:
   enabled: true
@@ -58,6 +61,7 @@ flutter:
     - assets/
     - assets/colors/
     - assets/icons/
+    - assets/images/
 
   fonts:
   - family: Poppins Medium

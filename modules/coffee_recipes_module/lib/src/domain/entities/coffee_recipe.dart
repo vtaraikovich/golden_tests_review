@@ -1,7 +1,7 @@
 class CoffeeRecipe {
   final String name;
   final String type;
-  final String imageUrl;
+  final String imagePath;
   final String time;
   final String serves;
   final String difficulty;
@@ -10,7 +10,7 @@ class CoffeeRecipe {
   const CoffeeRecipe({
     required this.name,
     required this.type,
-    required this.imageUrl,
+    required this.imagePath,
     required this.time,
     required this.serves,
     required this.difficulty,
@@ -20,7 +20,7 @@ class CoffeeRecipe {
   static CoffeeRecipe fromJson(json) => CoffeeRecipe(
         name: json['name'],
         type: json['type'],
-        imageUrl: json['imageUrl'],
+        imagePath: json['imagePath'],
         time: json['time'],
         serves: json['serves'],
         difficulty: json['difficulty'],

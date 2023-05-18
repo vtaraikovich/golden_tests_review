@@ -1,1 +1,1 @@
-export 'coffee_info/coffee_recipe_cubit.dart';
+export 'coffee_recipe/coffee_recipe_cubit.dart';

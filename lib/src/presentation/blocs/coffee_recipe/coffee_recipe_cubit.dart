@@ -9,11 +9,17 @@ class CoffeeRecipeCubit extends Cubit<CoffeeRecipeState> {
   final CoffeeRecipeRepository _coffeeRecipeRepository;
 
   CoffeeRecipeCubit(this._coffeeRecipeRepository)
-      : super(const CoffeeRecipeInitial([]));
+      : super(const CoffeeRecipeInitial());
 
-  void updateCoffeesInfo() {
-    final coffeeRecipes = _coffeeRecipeRepository.getCoffeeRecipes();
+  Future<void> updateCoffeeRecipes() async {
+    emit(const CoffeeRecipeLoading());
 
-    emit(CoffeeRecipeUpdate(coffeeRecipes));
+    try {
+      final coffeeRecipes = await _coffeeRecipeRepository.getCoffeeRecipes();
+
+      emit(CoffeeRecipeLoaded(coffeeRecipes));
+    } catch (e) {
+      emit(const CoffeeRecipeFailure());
+    }
   }
 }

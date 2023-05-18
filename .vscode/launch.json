@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "golden_tests_review",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "golden_tests_review (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "golden_tests_review (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "coffee_recipes_module",
+            "cwd": "modules\\coffee_recipes_module",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "coffee_recipes_module (profile mode)",
+            "cwd": "modules\\coffee_recipes_module",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "coffee_recipes_module (release mode)",
+            "cwd": "modules\\coffee_recipes_module",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

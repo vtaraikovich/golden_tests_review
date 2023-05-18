@@ -1,4 +1,6 @@
 {
     "coffeeRecipes": "Coffee Recipes",
+    "loading": "Loading...",
+    "failure": "Something went wrong",
     "instructions": "Instructions:"
 }

@@ -10,7 +10,7 @@ class CoffeeRecipeRepositoryImpl extends CoffeeRecipeRepository {
   CoffeeRecipeRepositoryImpl({required this.coffeeRecipeRemoteDataSource});
 
   @override
-  List<CoffeeRecipe> getCoffeeRecipes() {
+  Future<List<CoffeeRecipe>> getCoffeeRecipes() async {
     return coffeeRecipeRemoteDataSource.getCoffeeRecipes();
   }
 }

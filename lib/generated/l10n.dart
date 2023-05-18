@@ -60,6 +60,26 @@ class S {
     );
   }
 
+  /// `Loading...`
+  String get loading {
+    return Intl.message(
+      'Loading...',
+      name: 'loading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong`
+  String get failure {
+    return Intl.message(
+      'Something went wrong',
+      name: 'failure',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Instructions:`
   String get instructions {
     return Intl.message(

@@ -4,13 +4,12 @@ import '../../domain/domain.dart';
 
 @lazySingleton
 class CoffeeRecipeRemoteDataSource {
-  List<CoffeeRecipe> getCoffeeRecipes() {
+  Future<List<CoffeeRecipe>> getCoffeeRecipes() async {
     final response = [
       {
         "name": "Cappuccino",
         "type": "Cappuccino",
-        "imageUrl":
-            "https://cdn.pixabay.com/photo/2015/09/09/17/42/coffee-932103_960_720.jpg",
+        "imagePath": "assets/images/cappuccino.jpg",
         "time": "2-3 mins",
         "serves": "Serves 1",
         "difficulty": "Easy",
@@ -20,8 +19,7 @@ class CoffeeRecipeRemoteDataSource {
       {
         "name": "Cold Coffee",
         "type": "Espresso",
-        "imageUrl":
-            "https://lovingitvegan.com/wp-content/uploads/2018/06/Vegan-Iced-Coffee-Square.jpg",
+        "imagePath": "assets/images/ice_coffee.jpg",
         "time": "2-5 mins",
         "serves": "Serves 2",
         "difficulty": "Easy",
@@ -31,8 +29,7 @@ class CoffeeRecipeRemoteDataSource {
       {
         "name": "Irish Coffee",
         "type": "Liquer",
-        "imageUrl":
-            "https://del.h-cdn.co/assets/18/08/1600x1600/square-1519246658-irish-coffee-delish.jpg",
+        "imagePath": "assets/images/irish_coffee.jpg",
         "time": "40 mins",
         "serves": "Serves 1",
         "difficulty": "Easy",
@@ -42,8 +39,7 @@ class CoffeeRecipeRemoteDataSource {
       {
         "name": "Mocha",
         "type": "Mocha",
-        "imageUrl":
-            "https://cdn.pixabay.com/photo/2018/02/04/14/56/coffee-3129995_960_720.jpg",
+        "imagePath": "assets/images/cappuccino.jpg",
         "time": "2-3 mins",
         "serves": "Serves 1",
         "difficulty": "Easy",
@@ -53,8 +49,7 @@ class CoffeeRecipeRemoteDataSource {
       {
         "name": "Macchiato",
         "type": "Macchiato",
-        "imageUrl":
-            "https://cdn.pixabay.com/photo/2022/12/04/14/11/coffee-7634570_960_720.jpg",
+        "imagePath": "assets/images/macchiato.webp",
         "time": "2-3 mins",
         "serves": "Serves 1",
         "difficulty": "Easy",
@@ -63,7 +58,10 @@ class CoffeeRecipeRemoteDataSource {
       },
     ];
 
-    final coffeeRecipes = response.map(CoffeeRecipe.fromJson).toList();
+    final coffeeRecipes = await Future.delayed(
+      const Duration(seconds: 2),
+      () => response.map(CoffeeRecipe.fromJson).toList(),
+    );
 
     return coffeeRecipes;
   }

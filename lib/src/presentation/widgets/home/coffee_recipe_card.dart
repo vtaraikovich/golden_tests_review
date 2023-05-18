@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-import '../../common/common.dart';
+import '../../../common/common.dart';
 
-class CoffeeCard extends StatelessWidget {
+class CoffeeRecipeCard extends StatelessWidget {
   final String title;
   final String subtitle;
-  final String iconUrl;
+  final String imagePath;
   final String time;
   final VoidCallback onTap;
 
-  const CoffeeCard({
+  const CoffeeRecipeCard({
     required this.title,
     required this.subtitle,
-    required this.iconUrl,
+    required this.imagePath,
     required this.time,
     required this.onTap,
     super.key,
@@ -23,7 +23,7 @@ class CoffeeCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 130,
+        height: 120,
         padding: const EdgeInsets.symmetric(vertical: 4.0),
         child: Card(
           elevation: 0,
@@ -39,10 +39,10 @@ class CoffeeCard extends StatelessWidget {
                 ClipRRect(
                   borderRadius:
                       BorderRadius.circular(StyleConstants.smallPadding),
-                  child: Image.network(
-                    iconUrl,
-                    width: 100,
-                    height: 100,
+                  child: Image.asset(
+                    imagePath,
+                    width: 80,
+                    height: 80,
                     fit: BoxFit.fill,
                   ),
                 ),

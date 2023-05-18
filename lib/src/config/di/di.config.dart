@@ -13,7 +13,7 @@ import 'package:coffee_recipes_module/coffee_recipes_module.dart' as _i4;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import '../../presentation/blocs/coffee_info/coffee_recipe_cubit.dart' as _i3;
+import '../../presentation/blocs/coffee_recipe/coffee_recipe_cubit.dart' as _i3;
 
 // ignore_for_file: unnecessary_lambdas
 // ignore_for_file: lines_longer_than_80_chars
